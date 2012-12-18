@@ -17,14 +17,14 @@ namespace CaliburnMicroSpike
 			}
 		}
 
-		public void IncrementCount()
+		public void IncrementCount(int delta)
 		{
-			Count++;
+			Count += delta;
 		}
 
 		public bool CanIncrementCount
 		{
-			get { return Count < 60; }
+			get { return Count < 1000; }
 		}
 	}
 }
