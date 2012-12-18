@@ -1,10 +1,34 @@
-﻿using Caliburn.Micro;
+﻿using System.ComponentModel.Composition;
+using System.Windows.Media;
+using Caliburn.Micro;
 
 namespace CaliburnMicroSpike
 {
-	public class AppViewModel : PropertyChangedBase
+	[Export(typeof(AppViewModel))]
+	public class AppViewModel : PropertyChangedBase, IHandle<ColorEvent>
 	{
+
+		[ImportingConstructor]
+		public AppViewModel(ColorViewModel colorViewModel, IEventAggregator events)
+		{
+			ColorViewModel = colorViewModel;
+			events.Subscribe(this);
+		}
+		
 		private int _count = 50;
+		private SolidColorBrush _color;
+
+		public SolidColorBrush Color
+		{
+			get { return _color; }
+			set
+			{
+				_color = value;
+				NotifyOfPropertyChange(() => Color);
+			}
+		}
+
+		public ColorViewModel ColorViewModel { get; private set; }
 
 		public int Count
 		{
@@ -25,6 +49,11 @@ namespace CaliburnMicroSpike
 		public bool CanIncrementCount
 		{
 			get { return Count < 1000; }
+		}
+
+		public void Handle(ColorEvent message)
+		{
+			Color = message.Color;
 		}
 	}
 }
