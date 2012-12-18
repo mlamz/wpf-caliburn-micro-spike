@@ -4,13 +4,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             >
     <Grid Background="#FF484848">
 		<RadioButton Name="Red" Content="Red" Foreground="White"
-             VerticalAlignment="Center" HorizontalAlignment="Center" Margin="127,124,137,160" />
+             VerticalAlignment="Center" HorizontalAlignment="Center" Margin="118,83,146,201" />
 		<RadioButton Name="Green" Content="Green" Foreground="White"
-             VerticalAlignment="Center" HorizontalAlignment="Center" Margin="127,156,125,128" />
+             VerticalAlignment="Center" HorizontalAlignment="Center" Margin="118,115,134,169" />
 		<RadioButton Name="Blue" Content="Blue" Foreground="White"
-             VerticalAlignment="Center" HorizontalAlignment="Center" Margin="128,188,134,96" />
+             VerticalAlignment="Center" HorizontalAlignment="Center" Margin="119,147,143,137" />
 	</Grid>
 </UserControl>
