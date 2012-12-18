@@ -6,6 +6,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
 	<Grid Width="300" Height="300" Background="LightBlue">
-
+		<RepeatButton Name="IncrementCount" Content="Up" Margin="15" VerticalAlignment="Top" />
+		<TextBlock Name="Count" Margin="20" FontSize="150" VerticalAlignment="Center" HorizontalAlignment="Center" />
 	</Grid>
 </UserControl>
